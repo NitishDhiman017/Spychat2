@@ -9,7 +9,9 @@ def get_own_post_id():
 
     if own_media['meta']['code'] == 200:
         if len(own_media['data']):
+            print own_media['data'][0]['id']
             return own_media['data'][0]['id']
+
         else:
             print 'Post does not exist!'
     else:

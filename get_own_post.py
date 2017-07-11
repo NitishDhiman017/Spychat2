@@ -9,11 +9,11 @@ def get_own_post():
 
     if own_media['meta']['code'] == 200:
         if len(own_media['data']):
-            #print own_media['data'][0]['id']                          # extract post ID
-            #print own_media['data'][0]['comments']['counts']          #for comments
-            #return own_media['data'][0]['id']
+            print own_media['data'][0]['id']                          # extract post ID
+            print own_media['data'][0]['comments']['count']          #for comments
+            return own_media['data'][0]['id']
 
-            #image_name = own_media['data'][0]['id'] + '.jpeg'
+            image_name = own_media['data'][0]['id'] + '.jpeg'
             image_name = 'hh.jpeg'       #image name can be my choice
             image_url  = own_media['data'][0]['images']['standard_resolution']['url']
             urllib.urlretrieve(image_url, image_name)
