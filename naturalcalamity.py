@@ -2,28 +2,27 @@ from get_user_id import get_user_id,username
 from constant import BASE_URL,APP_ACCESS_TOKEN
 import requests
 
-service = ['#food' ,'#shop' ,'#bike' ,'#weather' ,'#iphoneonly' ,'#cool' ,'#life' ,'#lol' ,'#instamood' ,'#life' ,'#style'
-           ,'#amazing' ,'#summer' ,'#fashion' ,'#friends' ,'#cute' ,'#happy' ,'#feeling','#monogram','#thanks_everyone']
+service = ['#natural' ,'#earthquake' ,'#flood' ,'#weather' ,'#trees' ,'#thunderstorm' ,'#hurricane' ,'#drought' ,'#environment' ,'#birds' ,'#landslide'
+           ,'#tornado' ,'#tsunami' ,'#blizzard']
 
 
 def caption_comment() :
     user_id = get_user_id(username)
     request_url = (BASE_URL + "users/%s/media/recent/?access_token=%s" % (user_id, APP_ACCESS_TOKEN))
     print("Get request url: " + request_url)
-    username = requests.get(request_url).json()
-    if username['meta']['code'] == 200:
-
-        if len(username['data']):
-
-            for post in range(0, len(username['data'])):
+    user_info = requests.get(request_url).json()
+    print user_info
+    if user_info['meta']['code'] == 200:
+        if len(user_info['data']):
+            for post in range(0, len(user_info['data'])):
                 pic_no = post + 1
                 for temp in service:
-                    if username['data'][post]['caption'] == None:
+                    if user_info['data'][post]['caption'] == None:
                         print("Sorry there is no hashtag inside the image...")
 
-                    elif temp in username['data'][post]['caption']['text']:
-                        print(username['data'][post]['caption']['text'])
-                        pic_id = username['data'][post]['id']
+                    elif temp in user_info['data'][post]['caption']['text']:
+                        print(user_info['data'][post]['caption']['text'])
+                        pic_id = user_info['data'][post]['id']
                         comment_text = raw_input("Your comment: ")
                         payload = {"access_token": APP_ACCESS_TOKEN, "text": comment_text}
                         request_url = (BASE_URL + 'media/%s/comments') % (pic_id)
@@ -38,3 +37,6 @@ def caption_comment() :
                     else :
                         print("Sorry hashtag didn't match.Go further...")
             print("End of images...")
+    else:
+        print"Request failed."
+caption_comment()
