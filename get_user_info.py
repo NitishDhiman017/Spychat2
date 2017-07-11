@@ -1,12 +1,12 @@
 from constant import BASE_URL,APP_ACCESS_TOKEN
 
-from get_user_id import  get_user_id
+from get_user_id import  get_user_id,username
 
 import requests
 
-def get_user_info(insta_username):
+def get_user_info():
 
-    user_id = get_user_id(insta_username)   #it will return id of shawn rajput
+    user_id = get_user_id(username)   #it will return id of shawn rajput
     if user_id == None:
         print 'User does not exist!'
         exit()
@@ -24,4 +24,4 @@ def get_user_info(insta_username):
             print 'There is no data for this user!'
     else:
         print 'Status code other than 200 received!'
-get_user_info('shawnrajput007')
+get_user_info()
