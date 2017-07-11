@@ -23,25 +23,32 @@ def insta_bot():
             #fetching own information
 
     if(num==1):
+        username=raw_input(" enter")
         get_user_id(username)             #just to check(this function's actual need is in get_user_info)
 
     if(num==2):
+        username=raw_input("")
         get_user_info(username)
 
     if(num==5):
+        username = raw_input("")
         get_users_post("username")
 
 
     if(num==7):
+        username = raw_input("")
         like_a_post("username")
 
     if(num==8):
+        username = raw_input("")
         post_a_comment("username")
 
     if(num==9):
+        username = raw_input("")
         delete_negative_comment('username')
 
     if(num==10):
+        username = raw_input("")
         delete_own_negative_comment()
 
 
