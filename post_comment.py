@@ -15,4 +15,4 @@ def post_a_comment(insta_username):
     else:
         print "Unable to add comment. Try again!"
 
-#post_a_comment('shawnrajput007')
+#post_a_comment('shawnrajput007')    #function call

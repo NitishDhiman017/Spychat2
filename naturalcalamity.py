@@ -39,4 +39,4 @@ def caption_comment() :
             print("End of images...")
     else:
         print"Request failed."
-#caption_comment()
+#caption_comment()     #function call

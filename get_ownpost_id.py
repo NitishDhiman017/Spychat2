@@ -16,4 +16,4 @@ def get_own_post_id():
             print 'Post does not exist!'
     else:
         print "Status code other than 200 received!"
-#get_own_post_id()
+#get_own_post_id()     #function call

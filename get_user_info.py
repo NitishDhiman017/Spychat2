@@ -24,4 +24,4 @@ def get_user_info():
             print 'There is no data for this user!'
     else:
         print 'Status code other than 200 received!'
-#get_user_info()
+#get_user_info()    #function call for check
