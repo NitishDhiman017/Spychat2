@@ -20,4 +20,4 @@ def get_my_recent_liked_post():
             print 'Post does not exist!'
     else:
         print "Status code other than 200 received!"
-get_my_recent_liked_post()
+#get_my_recent_liked_post()   #just checking

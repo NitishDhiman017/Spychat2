@@ -1,7 +1,5 @@
 from self_info import self_info
 from get_own_post import get_own_post
-from get_users_post import get_users_post
-#from get_users_post import  get_user_id
 from recent_liked_pic import get_my_recent_liked_post
 from like_a_post import like_a_post
 from post_comment import post_a_comment
@@ -17,6 +15,8 @@ from comments_list import comment_list
 from get_comments_percentage import comment_percentage
 from get_post_id import get_post_id
 from get_all_posts_of_user import get_all_posts
+from naturalcalamity import caption_comment
+
 #other _data function
 def other_data():
 
@@ -36,7 +36,8 @@ def other_data():
         print "Enter 7 to get most liked post"
         print "Enter 8 to get most commented post"
         print "Enter 9 to get list of comments on recnet post"
-        print "Enter 10 to Exit."
+        print  "Enter 10 to to the extra objective"
+        print "Enter 11 to Exit."
 
         get_num = int(raw_input("Please Enter "))
         print('\n')
@@ -59,12 +60,14 @@ def other_data():
         elif get_num == 9:
             comment_list(username)
         elif get_num ==10:
-            choice =False
+            caption_comment()
+        elif get_num == 11:
+            choice = False
         else:
             print"Please enter valid number"
 
 
-#own_data_function
+#our_own_data_function
 def own_data():
     print "\nWhat do you want to do"
 
@@ -77,7 +80,8 @@ def own_data():
         print "Enter 5 to download most commented post"
         print "Enter 6 to delete negative comments of your posts"
         print "Enter 7 to get comments percentage of your posts with piechart"
-        print "Enter 8 to Exit."
+        print "Enter 8 to access the extra objective "
+        print "Enter 9 to Exit."
 
         get_num = int(raw_input("Please Enter"))
         print('\n')
@@ -97,12 +101,14 @@ def own_data():
             comment_percentage()
             show_pie_chart()
         elif get_num == 8:
-            choice=False
+            caption_comment()
+        elif get_num == 9:
+            choice = False
         else:
             print"Please enter valid number"
 
 
-#main fun
+#main function
 def main():
     print "\nWhat do you want to do"
 

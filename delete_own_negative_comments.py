@@ -49,4 +49,4 @@ def delete_own_negative_comment():
     print negative_length
     print total_length
 
-delete_own_negative_comment()
+#delete_own_negative_comment()

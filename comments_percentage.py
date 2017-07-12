@@ -20,4 +20,4 @@ def show_pie_chart():
     plt.title('PIE CHART')
     plt.show()              #it will show pie chart
     exit()
-show_pie_chart()
+#show_pie_chart()

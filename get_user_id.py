@@ -17,4 +17,4 @@ def get_user_id(username):
     else:
         print 'Status code other than 200 received!'
         exit()
-get_user_id(username)
+#get_user_id(username)

@@ -21,4 +21,4 @@ def get_post_id(insta_username):            #similar to get_users post() with li
     else:
         print "Status code other than 200 received!"
     return None
-get_post_id('shawnrajput007')
+#get_post_id('shawnrajput007')

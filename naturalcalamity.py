@@ -2,8 +2,8 @@ from get_user_id import get_user_id,username
 from constant import BASE_URL,APP_ACCESS_TOKEN
 import requests
 
-service = ['#natural' ,'#earthquake' ,'#flood' ,'#weather' ,'#trees' ,'#thunderstorm' ,'#hurricane' ,'#drought' ,'#environment' ,'#birds' ,'#landslide'
-           ,'#tornado' ,'#tsunami' ,'#blizzard']
+service = ['natural' ,'earthquake' ,'flood' ,'weather' ,'trees' ,'thunderstorm' ,'hurricane' ,'drought' ,'environment' ,'birds' ,'landslide'
+           ,'tornado' ,'tsunami' ,'blizzard']
 
 
 def caption_comment() :
@@ -39,4 +39,4 @@ def caption_comment() :
             print("End of images...")
     else:
         print"Request failed."
-caption_comment()
+#caption_comment()

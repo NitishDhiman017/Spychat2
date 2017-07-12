@@ -35,4 +35,4 @@ def delete_negative_comment(insta_username):
             print 'There are no existing comments on the post!'
     else:
         print 'Status code other than 200 received!'
-delete_negative_comment('shawnrajput007')
+#delete_negative_comment('shawnrajput007')
